@@ -1,0 +1,6 @@
+{
+    "critical": "https://i.ibb.co/TH81dHL/warning-alert.png",
+    "warning": "https://i.ibb.co/jDZBMWq/critical-alert.png",
+    "firing": "https://i.ibb.co/Q8GDNWj/alert-firing.png",
+    "resolved": "https://i.ibb.co/GMkyWBQ/alert-resolved.png"
+}

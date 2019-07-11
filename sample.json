@@ -1,0 +1,129 @@
+{
+    "cards": [
+        {
+            "header": {
+                "title": "6 Alerts on Wel Networks",
+                "subtitle": "Production",
+                "imageUrl": "https://i.ibb.co/dBqkPYV/WELNetworks-logo-svg.png"
+            },
+            "sections": [
+                {
+                    "widgets": [
+                        {
+                            "keyValue": {
+                                "topLabel": "Alert Name",
+                                "content": "WatchDog",
+                                "contentMultiline": "false"
+                            }
+                        },
+                        {
+                            "image": {
+                                "imageUrl": "https://i.ibb.co/TH81dHL/warning-alert.png"
+                            }
+                        },
+                        {
+                            "keyValue": {
+                                "topLabel": "Severity",
+                                "content": "Critical"
+                            }
+                        },
+                        {
+                            "keyValue": {
+                                "topLabel": "Message",
+                                "content": "This is an alert meant to ensure that the entire alerting pipeline is functional. This alert is always firing, therefore it should always be firing in Alertmanager and always fire against a receiver. There are integrations with various notification mechanisms that send a notification when this alert is not firing. For example the \"DeadMansSnitch\" integration in PagerDuty.",
+                                "contentMultiline": "true"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "widgets": [
+                        {
+                            "keyValue": {
+                                "topLabel": "Alert Name",
+                                "content": "WatchDog",
+                                "contentMultiline": "false"
+                            }
+                        },
+                        {
+                            "image": {
+                                "imageUrl": "https://i.ibb.co/jDZBMWq/critical-alert.png"
+                            }
+                        },
+                        {
+                            "keyValue": {
+                                "topLabel": "Severity",
+                                "content": "Critical "
+                            }
+                        },
+                        {
+                            "keyValue": {
+                                "topLabel": "Message",
+                                "content": "This is an alert meant to ensure that the entire alerting pipeline is functional. This alert is always firing, therefore it should always be firing in Alertmanager and always fire against a receiver. There are integrations with various notification mechanisms that send a notification when this alert is not firing. For example the \"DeadMansSnitch\" integration in PagerDuty.",
+                                "contentMultiline": "true"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "widgets": [
+                        {
+                            "keyValue": {
+                                "topLabel": "Alert Name",
+                                "content": "WatchDog",
+                                "contentMultiline": "false"
+                            }
+                        },
+                        {
+                            "image": {
+                                "imageUrl": "https://i.ibb.co/Q8GDNWj/alert-firing.png "
+                            }
+                        },
+                        {
+                            "keyValue": {
+                                "topLabel": "Severity",
+                                "content": "Critical"
+                            }
+                        },
+                        {
+                            "keyValue": {
+                                "topLabel": "Message",
+                                "content": "This is an alert meant to ensure that the entire alerting pipeline is functional. This alert is always firing, therefore it should always be firing in Alertmanager and always fire against a receiver. There are integrations with various notification mechanisms that send a notification when this alert is not firing. For example the \"DeadMansSnitch\" integration in PagerDuty.",
+                                "contentMultiline": "true"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "widgets": [
+                        {
+                            "keyValue": {
+                                "topLabel": "Alert Name",
+                                "content": "WatchDog",
+                                "contentMultiline": "false"
+                            }
+                        },
+                        {
+                            "image": {
+                                "imageUrl": "https://i.ibb.co/GMkyWBQ/alert-resolved.png"
+                            }
+                        },
+                        {
+                            "keyValue": {
+                                "topLabel": "Severity",
+                                "content": "Critical"
+                            }
+                        },
+                        {
+                            "keyValue": {
+                                "topLabel": "Message",
+                                "content": "This is an alert meant to ensure that the entire alerting pipeline is functional. This alert is always firing, therefore it should always be firing in Alertmanager and always fire against a receiver. There are integrations with various notification mechanisms that send a notification when this alert is not firing. For example the \"DeadMansSnitch\" integration in PagerDuty.",
+                                "contentMultiline": "true"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
