@@ -1,5 +1,6 @@
 import { PrometheusAlert } from "../interfaces/PrometheusAlert";
 import { ChatMessageAlert } from "../interfaces/ChatMessageAlert";
+const moment = require('moment');
 
 const imageMap = require('../config/image-map.json')
 export class Alert {
@@ -22,7 +23,7 @@ export class Alert {
                         topLabel: "Alert Name",
                         content: this.prometheusAlert.labels.alertname,
                         contentMultiline: true,
-                        bottomLabel: `${this.prometheusAlert.startsAt}-${this.prometheusAlert.endsAt || 'Present'}`
+                        bottomLabel: `${this.getTime(this.prometheusAlert.startsAt)} -- ${this.getTime(this.prometheusAlert.endsAt)}`
                     }
                 },
                 {
@@ -35,7 +36,7 @@ export class Alert {
                 {
                     keyValue: {
                         topLabel: "Labels",
-                        content: JSON.stringify(this.prometheusAlert.labels),
+                        content: this.JsonToString(this.prometheusAlert.labels),
                         contentMultiline: true
                     }
                 },
@@ -61,5 +62,18 @@ export class Alert {
 
     getBanner(label) {
         return imageMap[label];
+    }
+
+
+    getTime(utc) {
+        return utc !== '0001-01-01T00:00:00Z' ? moment(utc).utc(process.env.timezone || '').format(process.env.date_format || "YYYY-MM-DD hh:mm:ss") : 'Present';
+    }
+
+    JsonToString(obj) {
+        let str = '';
+        for (let key in obj) {
+            str += `${key}=${obj[key]} \n`
+        }
+        return str;
     }
 }

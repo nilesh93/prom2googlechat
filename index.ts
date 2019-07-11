@@ -23,13 +23,14 @@ app.get("/healthz", (req, res) => {
     res.status(200).send(`Prom2GoogleChat is running`);
 })
 
-app.use("/", (req, res) => {
+app.post("/", (req, res) => {
     console.log('recieved alert');
     console.log(JSON.stringify(req.body))
     for (let channel of config.channels) {
         const chat = new Chat(req.body, channel);
         chat.send();
     }
+    res.status(200).json({});
 })
 
 app.listen(process.env.port || 3000, () => {

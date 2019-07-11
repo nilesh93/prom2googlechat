@@ -22,7 +22,7 @@ export class Chat {
                         subtitle: this.channel.subtitle,
                         imageUrl: this.channel.logo
                     },
-                    sections: this.prometheusAlert.alerts.filter(this.filter).map(o => new Alert(o).chatAlert)
+                    sections: this.prometheusAlert.alerts.filter(this.filter.bind(this)).map(o => new Alert(o).chatAlert)
                 }
             ]
         }

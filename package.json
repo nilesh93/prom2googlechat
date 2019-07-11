@@ -4,22 +4,26 @@
   "description": "Integrate Prometheus Alert Manager with Google Chat",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./node_modules/nodemon/bin/nodemon.js --exec ts-node index.ts"
   },
   "author": "nilesh93.j@gmail.com",
   "license": "ISC",
   "dependencies": {
     "@types/node": "^12.0.12",
-    "googleapis": "^40.0.1",
-    "js-yaml": "^3.13.1",
-    "node-yaml": "^4.0.1",
-    "request": "^2.88.0",
-    "request-promise": "^4.2.4",
-    "yamljs": "^0.3.0",
     "body-parser": "^1.18.3",
     "cookie-parser": "^1.4.3",
     "cors": "^2.8.4",
     "express": "^4.16.3",
-    "express-session": "^1.15.6"
+    "express-session": "^1.15.6",
+    "googleapis": "^40.0.1",
+    "js-yaml": "^3.13.1",
+    "moment": "^2.24.0",
+    "node-yaml": "^4.0.1",
+    "nodemon": "^1.19.1",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4",
+    "typescript": "^3.5.3",
+    "yamljs": "^0.3.0"
   }
 }
