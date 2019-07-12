@@ -5,4 +5,5 @@ export interface Channel {
     webhook: string;
     labels: { [key: string]: string }
     ignore_re?: { [key: string]: string }
+    grouped: boolean;
 }

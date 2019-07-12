@@ -10,7 +10,7 @@ export class Alert {
         this.build();
     }
 
-    build() {
+    private build() {
         this.chatAlert = {
             widgets: [
                 {
@@ -45,7 +45,7 @@ export class Alert {
         }
     }
 
-    get alertBanner() {
+    private get alertBanner() {
         if (this.prometheusAlert.status === 'firing') {
             switch (this.prometheusAlert.labels.severity) {
                 case 'critical':
@@ -60,16 +60,16 @@ export class Alert {
         }
     }
 
-    getBanner(label) {
+    private getBanner(label) {
         return imageMap[label];
     }
 
 
-    getTime(utc) {
+    private getTime(utc) {
         return utc !== '0001-01-01T00:00:00Z' ? moment(utc).utc(process.env.timezone || '').format(process.env.date_format || "YYYY-MM-DD hh:mm:ss") : 'Present';
     }
 
-    JsonToString(obj) {
+    private JsonToString(obj) {
         let str = '';
         for (let key in obj) {
             str += `${key}=${obj[key]} \n`
