@@ -1,0 +1,8 @@
+channels:
+- logo: https://i.ibb.co/dBqkPYV/WELNetworks-logo-svg.png
+  title: Platformer Cloud
+  subtitle: Production
+  ignore_re:
+    alertname: Watchdog
+  webhook: <google chat webhook>
+  labels: {}

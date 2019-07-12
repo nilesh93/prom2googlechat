@@ -22,19 +22,33 @@ export class Chat {
                         subtitle: this.channel.subtitle,
                         imageUrl: this.channel.logo
                     },
-                    sections: this.prometheusAlert.alerts.filter(this.filter.bind(this)).map(o => new Alert(o).chatAlert)
+                    sections: this.prometheusAlert.alerts
+                        .filter(this.filterKeys.bind(this))
+                        .map(o => new Alert(o).chatAlert)
                 }
             ]
         }
     }
 
-    filter(obj: PrometheusAlert) {
+    filterKeys(obj: PrometheusAlert) {
         if (!this.channel.labels) {
             return true;
         } else {
             let bool = true;
             for (let key in this.channel.labels) {
                 bool = bool && (this.channel.labels[key] === obj.labels[key]);
+            }
+            return bool;
+        }
+    }
+
+    ignoreAlerts(obj: PrometheusAlert) {
+        if (!this.channel.ignore_re) {
+            return true;
+        } else {
+            let bool = true;
+            for (let key in this.channel.ignore_re) {
+                bool = bool && (!!this.channel.ignore_re[key].match(obj.labels[key]));
             }
             return bool;
         }
@@ -54,4 +68,6 @@ export class Chat {
             console.error(e)
         }
     }
+
+
 }

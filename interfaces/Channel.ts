@@ -4,4 +4,5 @@ export interface Channel {
     subtitle?: string;
     webhook: string;
     labels: { [key: string]: string }
+    ignore_re?: { [key: string]: string }
 }
