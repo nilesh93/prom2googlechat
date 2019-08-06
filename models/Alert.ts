@@ -29,7 +29,7 @@ export class Alert {
                 {
                     keyValue: {
                         topLabel: "Message",
-                        content: this.prometheusAlert.annotations.message,
+                        content: this.prometheusAlert.annotations.message || this.prometheusAlert.annotations.description || this.prometheusAlert.annotations.summary,
                         contentMultiline: true
                     }
                 },

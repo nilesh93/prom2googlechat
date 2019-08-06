@@ -68,6 +68,7 @@ export class Chat {
 
     private async sendAsIndividual() {
         this.alerts.forEach(async alert => {
+        
             return this.sendMessage(this.wrapAlertWithHeaders([alert]));
         })
     }
@@ -76,6 +77,7 @@ export class Chat {
         if (!!this.channel.grouped) {
             return this.sendAsGrouped();
         } else {
+
             return this.sendAsIndividual();
         }
     }

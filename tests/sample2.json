@@ -1,0 +1,46 @@
+{
+    "receiver": "warning",
+    "status": "resolved",
+    "alerts": [
+        {
+            "status": "resolved",
+            "labels": {
+                "alertname": "PrometheusTSDBWALCorruptions",
+                "endpoint": "web",
+                "instance": "192.168.99.243:9090",
+                "job": "prom-operator-prometheus-o-prometheus",
+                "namespace": "monitoring",
+                "pod": "prometheus-prom-operator-prometheus-o-prometheus-0",
+                "prometheus": "monitoring/prom-operator-prometheus-o-prometheus",
+                "service": "prom-operator-prometheus-o-prometheus",
+                "severity": "warning"
+            },
+            "annotations": {
+                "description": "prom-operator-prometheus-o-prometheus at 192.168.99.243:9090 has a corrupted write-ahead log (WAL).",
+                "summary": "Prometheus write-ahead log is corrupted"
+            },
+            "startsAt": "2019-08-04T12:28:39.302257709Z",
+            "endsAt": "2019-08-06T01:19:39.302257709Z",
+            "generatorURL": "http://prom-operator-prometheus-o-prometheus.monitoring:9090/graph?g0.expr=prometheus_tsdb_wal_corruptions_total%7Bjob%3D%22prom-operator-prometheus-o-prometheus%22%2Cnamespace%3D%22monitoring%22%7D+%3E+0&g0.tab=1"
+        }
+    ],
+    "groupLabels": {},
+    "commonLabels": {
+        "alertname": "PrometheusTSDBWALCorruptions",
+        "endpoint": "web",
+        "instance": "192.168.99.243:9090",
+        "job": "prom-operator-prometheus-o-prometheus",
+        "namespace": "monitoring",
+        "pod": "prometheus-prom-operator-prometheus-o-prometheus-0",
+        "prometheus": "monitoring/prom-operator-prometheus-o-prometheus",
+        "service": "prom-operator-prometheus-o-prometheus",
+        "severity": "warning"
+    },
+    "commonAnnotations": {
+        "description": "prom-operator-prometheus-o-prometheus at 192.168.99.243:9090 has a corrupted write-ahead log (WAL).",
+        "summary": "Prometheus write-ahead log is corrupted"
+    },
+    "externalURL": "http://prom-operator-prometheus-o-alertmanager.monitoring:9093",
+    "version": "4",
+    "groupKey": "{}/{severity=\"warning\"}:{}"
+}
