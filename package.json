@@ -18,7 +18,7 @@
     "express-session": "^1.15.6",
     "googleapis": "^40.0.1",
     "js-yaml": "^3.13.1",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "node-yaml": "^4.0.1",
     "nodemon": "^1.19.1",
     "request": "^2.88.0",
